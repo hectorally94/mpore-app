@@ -1,0 +1,55 @@
+
+import { Button, DarkThemeToggle, Flowbite, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from 'flowbite-react';
+
+import {FaHospitalUser} from 'react-icons/fa';
+import { customTheme } from '../../customTheme';
+import { NavLink } from 'react-router-dom';
+export function NavBar() {
+  return (
+    <Flowbite theme={{theme:customTheme}}>
+    <Navbar fluid rounded className="bg-green-50">
+      <NavbarBrand href="https://flowbite-react.com">
+        <FaHospitalUser className="mr-3 h-6 sm:h-9 text-green-500 dark:text-white" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Mpore Clinic</span>
+      </NavbarBrand>
+      <div className="flex md:order-2 gap-2">
+         <DarkThemeToggle className='bg-green-50' />
+         <Button color="button_primary"  >
+          LogIn
+        </Button>
+
+        <NavbarToggle />
+      </div>
+      <NavbarCollapse>
+        <NavbarLink navbar="link">
+        <NavLink   to="/accueil"> ACCUEIL</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="apropos">A PROPOS</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/services">SERVICES</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/opportunites">OPPORTUNITES</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/blog">BLOG</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/contact">CONTACTS</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/activites">ACTIVITES</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/conseil">CONSEIL</NavLink>
+        </NavbarLink>
+        <NavbarLink navbar="link">
+        <NavLink  to="/publication">PUBLICATION</NavLink>
+        </NavbarLink>
+      </NavbarCollapse>
+    </Navbar>
+  </Flowbite>
+  );
+}
