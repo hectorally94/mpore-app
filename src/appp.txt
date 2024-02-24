@@ -1,12 +1,12 @@
 import './App.css';
 import { Myrouter } from './Myrouters/Myrouter';
-import { NavBar } from './NavBar/NavBar';
+import Layout from './sideTry/Layout';
 function App() {
   return (
     <div className="bg-blue-50 dark:bg-gray-800">
-   <NavBar/>
-   <Myrouter/>
-            
+   <Layout>
+                <Myrouter/>
+            </Layout> 
     </div>
   );
 }

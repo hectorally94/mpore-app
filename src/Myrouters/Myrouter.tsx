@@ -1,5 +1,4 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { AdminDashboard } from '../Components/Admin/Dashbord/AdminDashboard';
 import { ArticleFreeDetails } from '../Components/Articles/ArticleFreeDetails';
 import { PaymentTimeline } from '../Components/Articles/PaymentTimeline';
 import { Articles } from '../Pages/ Articles/ Articles';
@@ -61,11 +60,7 @@ export const  Myrouter=()=> {
    <Route path='/timeline'>
      <PaymentTimeline />
    </Route>
-   {/* Admin routes */}
-   <Route path='/admin' >
-            <AdminDashboard />
-          </Route>
-
+   
    </Switch>
      </Route>
 
